@@ -10,10 +10,11 @@ module.exports = {
         library: 'Aperture',
         libraryTarget: 'umd'
     },
+    devtool: '#sourcemap',
     module: {
         loaders: [
             {
-                test: /\.js?$/,
+                test: /\.js$/,
                 loader: 'babel-loader',
                 query: {
                     cacheDirectory: true,
