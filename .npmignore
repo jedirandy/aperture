@@ -1,0 +1,7 @@
+examples/
+src/
+test/
+_site/
+.*
+karma.conf.js
+webpack.config.js

@@ -1,5 +1,8 @@
 # Aperture
 
+[![Build Status](https://travis-ci.org/jedirandy/aperture.svg?branch=master)](https://travis-ci.org/jedirandy/aperture)
+[![Dependency Status](https://www.versioneye.com/user/projects/57082104fcd19a00415b0fff/badge.svg?style=flat)](https://www.versioneye.com/user/projects/57082104fcd19a00415b0fff)
+
 :camera: A JavaScript library providing a virtual scrolling container, allows (very large) datasets to be displayed with high performance and memory efficiency.
 
 What it provides:

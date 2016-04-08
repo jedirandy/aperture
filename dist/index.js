@@ -67,7 +67,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  value: true
 	});
 	
-	var _aperture = __webpack_require__(5);
+	var _aperture = __webpack_require__(2);
 	
 	var _aperture2 = _interopRequireDefault(_aperture);
 	
@@ -78,48 +78,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = _aperture2.default;
 
 /***/ },
-/* 2 */,
-/* 3 */,
-/* 4 */
-/***/ function(module, exports) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	    value: true
-	});
-	exports.identity = identity;
-	function identity(arg) {
-	    return arg;
-	}
-	
-	var browser = exports.browser = function () {
-	    // Opera 8.0+
-	    var isOpera = !!window.opr && !!opr.addons || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-	    // Firefox 1.0+
-	    var isFirefox = typeof InstallTrigger !== 'undefined';
-	    // At least Safari 3+: "[object HTMLElementConstructor]"
-	    var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-	    // Internet Explorer 6-11
-	    var isIE = /*@cc_on!@*/false || !!document.documentMode;
-	    // Edge 20+
-	    var isEdge = !isIE && !!window.StyleMedia;
-	    // Chrome 1+
-	    var isChrome = !!window.chrome && !!window.chrome.webstore;
-	    // Blink engine detection
-	    var isBlink = (isChrome || isOpera) && !!window.CSS;
-	    return {
-	        isOpera: isOpera,
-	        isFirefox: isFirefox,
-	        isIE: isIE,
-	        isEdge: isEdge,
-	        isChrome: isChrome,
-	        isBlink: isBlink
-	    };
-	}();
-
-/***/ },
-/* 5 */
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -130,7 +89,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
-	var _element = __webpack_require__(6);
+	var _element = __webpack_require__(3);
 	
 	var _element2 = _interopRequireDefault(_element);
 	
@@ -301,7 +260,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.default = Aperture;
 
 /***/ },
-/* 6 */
+/* 3 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -367,6 +326,46 @@ return /******/ (function(modules) { // webpackBootstrap
 	}();
 
 	exports.default = Element;
+
+/***/ },
+/* 4 */
+/***/ function(module, exports) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+	exports.identity = identity;
+	function identity(arg) {
+	    return arg;
+	}
+	
+	var browser = exports.browser = function () {
+	    if (typeof window === 'undefined') return { isBrowser: false };
+	    // Opera 8.0+
+	    var isOpera = !!window.opr && !!opr.addons || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+	    // Firefox 1.0+
+	    var isFirefox = typeof InstallTrigger !== 'undefined';
+	    // At least Safari 3+: "[object HTMLElementConstructor]"
+	    var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+	    // Internet Explorer 6-11
+	    var isIE = /*@cc_on!@*/false || !!document.documentMode;
+	    // Edge 20+
+	    var isEdge = !isIE && !!window.StyleMedia;
+	    // Chrome 1+
+	    var isChrome = !!window.chrome && !!window.chrome.webstore;
+	    // Blink engine detection
+	    var isBlink = (isChrome || isOpera) && !!window.CSS;
+	    return {
+	        isOpera: isOpera,
+	        isFirefox: isFirefox,
+	        isIE: isIE,
+	        isEdge: isEdge,
+	        isChrome: isChrome,
+	        isBlink: isBlink
+	    };
+	}();
 
 /***/ }
 /******/ ])
