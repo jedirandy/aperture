@@ -11,7 +11,11 @@ What it provides:
 
 What it doesn't provide:
 * how items are rendered, how layout looks like, they are completely left to you
-* styling
+
+## Install
+```
+npm install aperturejs
+```
 
 ## Example
 
