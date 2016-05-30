@@ -99,8 +99,8 @@ export default class Aperture {
         let scrollTop = this.scrollable.domNode.scrollTop;
         let startIndex = Math.ceil(scrollTop / this.config.itemHeight);
         let endIndex = startIndex + this.config.numOfItemsToRender - 1;
-        this.onScroll(this.viewport.domNode, items, startIndex, endIndex);
-        if (endIndex >= this.items.length) {
+        this.onScroll(this.viewport.domNode, this.items, startIndex, endIndex);
+        while (endIndex >= this.items.length) {
             this.onOverflow(this.viewport.domNode, endIndex - startIndex);
             endIndex --;
         }

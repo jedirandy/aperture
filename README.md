@@ -34,6 +34,11 @@ var aperture = new Aperture({
     onRerender: (container, item, index, relativeIndex) => {
         let div = document.getElementById('n-' + relativeIndex);
         div.innerHTML = item;
+    },
+    onOverflow: (container, relativeIndex) => {
+        // this is necessary when the scroller reaches the end
+        // the very last items may become placeholders
+        div.innerHTML = '';
     }
 });
 aperture.renderTo(aDomElement);
