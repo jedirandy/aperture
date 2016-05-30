@@ -27,7 +27,7 @@ var aperture = new Aperture({
     items: items, // array of dataset
     onRender: (container, item, index, relativeIndex) => {
         let div = document.createElement('div');
-        div.setAttribute('n-' + relativeIndex);
+        div.setAttribute('id', 'n-' + relativeIndex);
         div.innerHTML = item;
         container.appendChild(container);
     },
